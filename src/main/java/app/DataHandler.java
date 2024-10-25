@@ -1,10 +1,10 @@
 package app;
 
-public class DataHandler <T>{
+public class DataHandler{
     // Узагальнений нестатичний метод, який має параметр
     // як масив узагальненого типу та повертає String значення
     // обробленого масиву
-    public T handleData(T[] items) {
+    public <T> String handleData(T[] items) {
         StringBuilder sb = new StringBuilder();
         int count = 0;
         // Цикл обробки масиву узагальненого типу
@@ -12,6 +12,6 @@ public class DataHandler <T>{
             count++;
             sb.append(String.format("(%d) %s ", count, item));
         }
-        return (T) sb.toString();
+        return  sb.toString();
     }
 }
